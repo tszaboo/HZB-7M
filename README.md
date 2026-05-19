@@ -8,7 +8,7 @@ The HZB-7M is a compact high-impedance active buffer designed for use with oscil
 |---|---|
 | Bandwidth (−3 dB) | 750 MHz typical |
 | Input impedance | 1 MΩ |
-| Capacitive loading | ~6 pF |
+| Capacitive loading | ~6 pF (measured: 6.86 pF) |
 | Output impedance | 50 Ω |
 | Attenuation | 1:2 (DC coupled) |
 | Input voltage range | ±35 V (with 1:10 probe) |
@@ -35,15 +35,17 @@ The buffer was measured with a LiteVNA from 10 MHz to 1 GHz (2× averaging). Two
 
 | Capture | S21 (log mag) | S11 at marker (756 MHz) |
 |---|---|---|
-| BNC input (`HZB7M.png`) | −3.06 dB | 198 + j271 mΩ |
-| SMA input (`HZB7M-SMA.png`) | −3.02 dB | 338 + j842 µΩ |
+| BNC input compensated with e-delay (`HZB7M.png`) | −3.06 dB | 198 + j271 mΩ |
+| Raw measurements (`HZB7M-SMA.png`) | −3.02 dB | 338 + j842 µΩ |
 
 The −3 dB S21 is consistent with the 1:2 voltage attenuation spec: the 50 Ω output driving a 50 Ω load forms a voltage divider, giving −6 dB in power or −3 dB in voltage referred to the source. The −3 dB bandwidth is confirmed at 750 MHz.
+
+**Input capacitance** was extracted from S11 by fitting the measured input impedance to a parallel RC model (1 MΩ ∥ C). The imaginary part of Z_in at each frequency point gives C directly. Averaged over 10–50 MHz (20 points), the result is **6.86 pF**, consistent with the ~6 pF specification.
 
 | | |
 |---|---|
 | ![HZB7M BNC input VNA](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/VNA/HZB7M.png) | ![HZB7M SMA input VNA](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/VNA/HZB7M-SMA.png) |
-| BNC input | SMA input |
+| BNC input compensated with e-delay | Raw measurements |
 
 ---
 
@@ -145,3 +147,17 @@ Input shorted with an SMA shorting plug. C1 measures the HZB-7M output; C3 is a 
 | C3 — scope reference | 1.08 mV | 3.05 mV |
 
 The HZB-7M output noise floor is significantly lower than the scope's own probe channel reference, confirming low self-noise from the buffer.
+
+---
+
+### 6. Power Supply
+
+**Setup**
+
+> ⚠️ *Measurements pending.*
+
+The HZB-7M is powered via USB Type-C at 5 V. The power supply is isolated — the SMA and BNC connectors share a common ground that is isolated from the USB supply ground.
+
+**Results**
+
+> ⚠️ *To be added: current consumption at 5 V, isolation verification.*
