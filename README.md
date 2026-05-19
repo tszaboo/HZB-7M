@@ -27,7 +27,7 @@ The HZB-7M is a compact high-impedance active buffer designed for use with oscil
 
 **Setup**
 
-![VNA measurement setup](VNA/vna_measurement_block_diagram_v6.svg)
+![VNA measurement setup](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/VNA/vna_measurement_block_diagram_v6.svg)
 
 The buffer was measured with a LiteVNA from 10 MHz to 1 GHz (2× averaging). Two captures were taken: one via the BNC input and one via the SMA input directly.
 
@@ -42,7 +42,7 @@ The −3 dB S21 is consistent with the 1:2 voltage attenuation spec: the 50 Ω o
 
 | | |
 |---|---|
-| ![HZB7M BNC input VNA](VNA/HZB7M.png) | ![HZB7M SMA input VNA](VNA/HZB7M-SMA.png) |
+| ![HZB7M BNC input VNA](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/VNA/HZB7M.png) | ![HZB7M SMA input VNA](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/VNA/HZB7M-SMA.png) |
 | BNC input | SMA input |
 
 ---
@@ -51,16 +51,16 @@ The −3 dB S21 is consistent with the 1:2 voltage attenuation spec: the 50 Ω o
 
 **Setup**
 
-![Bode measurement setup](Bode/siglent_dual_chain_v2.svg)
+![Bode measurement setup](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Bode/siglent_dual_chain_v2.svg)
 
 Bode plot swept from 10 Hz to 20 MHz using the Siglent SDS824X built-in Bode plot function. Configuration: DUT input C3, DUT output C1, sweep type Simple, frequency mode Decade, 10 points/decade, amplitude 0.30 Vpp, offset 0.00 V, load 50 Ω.
 
 **Results**
 
-![Bode plot configuration](Bode/SDS824X_HD_PNG_19.png)
+![Bode plot configuration](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Bode/SDS824X_HD_PNG_19.png)
 *Bode plot configuration screen*
 
-![Bode plot result](Bode/SDS824X_HD_PNG_20.png)
+![Bode plot result](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Bode/SDS824X_HD_PNG_20.png)
 *Frequency response: amplitude (yellow) and phase (blue), 10 Hz – 20 MHz*
 
 The amplitude response is flat within ±0.3 dB from 10 Hz through the mid-band, with the phase beginning to rise toward 20 MHz. Representative values from the data table:
@@ -77,7 +77,7 @@ The amplitude response is flat within ±0.3 dB from 10 Hz through the mid-band, 
 
 **Setup**
 
-![Clipping measurement setup](Clipping/siglent_dual_chain_v2.svg)
+![Clipping measurement setup](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Clipping/siglent_dual_chain_v2.svg)
 
 Triangle wave at 500 kHz applied to the buffer input (C3). Output observed on C1. Two input amplitudes compared: one within the linear range, one exceeding the output swing limit.
 
@@ -85,7 +85,7 @@ Triangle wave at 500 kHz applied to the buffer input (C3). Output observed on C1
 
 | | |
 |---|---|
-| ![No clipping](Clipping/SDS824X_HD_PNG_22.png) | ![Clipping](Clipping/SDS824X_HD_PNG_23.png) |
+| ![No clipping](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Clipping/SDS824X_HD_PNG_22.png) | ![Clipping](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Clipping/SDS824X_HD_PNG_23.png) |
 | Linear — Pk-Pk input: 6.73 V, output: 3.37 V | Clipping — Pk-Pk input: 9.43 V, output: 3.42 V |
 
 With a smaller input signal the output is clean and proportional. With a larger input, the output peak flattens, consistent with the ±3.5 V output swing limit.
@@ -96,7 +96,7 @@ With a smaller input signal the output is clean and proportional. With a larger 
 
 **Setup**
 
-![Signals measurement setup](Signals/siglent_dual_chain_v2.svg)
+![Signals measurement setup](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Signals/siglent_dual_chain_v2.svg)
 
 Various waveforms applied to the buffer input (C3, 10× probe) and observed at the output (C1) to demonstrate normal operation across signal types.
 
@@ -104,22 +104,22 @@ Various waveforms applied to the buffer input (C3, 10× probe) and observed at t
 
 **Square wave — 500 kHz overview**
 
-![Square wave 500 kHz](Signals/SDS824X_HD_PNG_24.png)
+![Square wave 500 kHz](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Signals/SDS824X_HD_PNG_24.png)
 *C1 Pk-Pk: 509 mV, C3 Pk-Pk: 953 mV, f = 500 kHz*
 
 **Square wave — 500 kHz rise time detail**
 
-![Rise time](Signals/SDS824X_HD_PNG_25.png)
+![Rise time](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Signals/SDS824X_HD_PNG_25.png)
 *Single rising edge; C1 Pk-Pk: 493 mV, C3 Pk-Pk: 939 mV*
 
 **Hyperbolic tangent (tanh) signal — 25 kHz**
 
-![tanh signal](Signals/SDS824X_HD_PNG_26.png)
+![tanh signal](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Signals/SDS824X_HD_PNG_26.png)
 *C1 Pk-Pk: 1.48 V, C3 Pk-Pk: 2.78 V, f ≈ 24.8 kHz*
 
 **Amplitude modulated burst — ~2 MHz carrier**
 
-![AM burst](Signals/SDS824X_HD_PNG_27.png)
+![AM burst](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Signals/SDS824X_HD_PNG_27.png)
 *C1 Pk-Pk: 1.47 V, C3 Pk-Pk: 2.88 V, carrier ≈ 1.99 MHz*
 
 All waveforms are faithfully reproduced at the output with the expected 1:2 attenuation.
@@ -130,13 +130,13 @@ All waveforms are faithfully reproduced at the output with the expected 1:2 atte
 
 **Setup**
 
-![Noise measurement setup](/Noise/siglent_dual_chain_v3.svg)
+![Noise measurement setup](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Noise/siglent_dual_chain_v3.svg)
 
 Input shorted with an SMA shorting plug. C1 measures the HZB-7M output; C3 is a P2200 passive probe connected directly at the scope input as a reference.
 
 **Results**
 
-![Noise floor](Noise/SDS824X_HD_PNG_29.png)
+![Noise floor](https://github.com/tszaboo/HZB-7M/blob/main/Measurements/Noise/SDS824X_HD_PNG_29.png)
 *Yellow (C1): HZB-7M output noise. Cyan (C3): scope reference channel.*
 
 | Channel | RMS (mean) | Pk-Pk (mean) |
