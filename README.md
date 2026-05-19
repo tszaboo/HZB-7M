@@ -1,6 +1,18 @@
 # HZB-7M Buffer Characterisation
 
-The HZB-7M is a compact high-impedance active buffer designed for use with oscilloscope probes. It features a 1 MΩ input impedance, 50 Ω output, and approximately 750 MHz bandwidth, allowing signals to be observed with minimal loading while driving standard 50 Ω coaxial test equipment.
+![HZB-7M](https://github.com/tszaboo/HZB-7M/blob/main/Pictures/HZB-7M.jpg)
+
+The HZB-7M is a compact high-impedance active buffer designed to let you connect standard oscilloscope probes to 50 Ω instruments — spectrum analyzers, VNAs, frequency counters, and sampling oscilloscopes — while preserving the familiar loading and ergonomics of a regular passive probe. It presents 1 MΩ ∥ 6 pF at the input and drives a 50 Ω output, with a 750 MHz bandwidth that exceeds virtually all passive 1 MΩ probes, making the buffer almost never the limiting factor in the measurement chain.
+
+The device is intentionally designed to behave like a scope input: the 6 pF capacitance is not a compromise but a feature, allowing standard passive probes to be trimmed and compensated exactly as they would be on an oscilloscope. When connected with a compensated probe, high-frequency behaviour closely matches what you would see on the scope itself.
+
+### Use cases
+
+- Use a generic oscilloscope probe with a spectrum analyzer, VNA, or frequency counter without loading the circuit under test
+- Add a 1 MΩ input to oscilloscopes that only have 50 Ω inputs — sampling oscilloscopes, older high-speed instruments, or that LeCroy collecting dust because four probes would cost €2000
+- Extend probes into thermal chambers or other environments where the instrument cannot follow
+- Measure IF sections in radios, or any RF circuit, with a regular oscilloscope probe
+- Convert signals to 50 Ω for RF experiments without the loading of a direct BNC connection
 
 ## Specifications
 
